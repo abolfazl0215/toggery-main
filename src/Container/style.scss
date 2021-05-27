@@ -1,0 +1,937 @@
+                                @mixin keyframes($animationName) {
+                                    @-webkit-keyframes #{$animationName} {
+                                        @content;
+                                    }
+                                    @-moz-keyframes #{$animationName} {
+                                        @content;
+                                    }
+                                    @-o-keyframes #{$animationName} {
+                                        @content;
+                                    }
+                                    @keyframes #{$animationName} {
+                                        @content;
+                                    }
+                                }
+                                
+                                @mixin animate($name, $duration, $iteration, $direction) {
+                                    -webkit-animation-duration: $duration;
+                                    -moz-animation-duration: $duration;
+                                    -o-animation-duration: $duration;
+                                    animation-duration: $duration;
+                                    -webkit-animation-iteration-count: $iteration;
+                                    -moz-animation-iteration-count: $iteration;
+                                    -o-animation-iteration-count: $iteration;
+                                    animation-iteration-count: $iteration;
+                                    -webkit-animation-name: $name;
+                                    -moz-animation-name: $name;
+                                    -o-animation-name: $name;
+                                    animation-name: $name;
+                                    -webkit-animation-direction: $direction;
+                                    -moz-animation-direction: $direction;
+                                    -o-animation-direction: $direction;
+                                    animation-direction: $direction;
+                                }
+                                
+                                body {
+                                    margin: 0px;
+                                    padding: 0px;
+                                }
+                                
+                                .navbar-main {
+                                    position: fixed;
+                                    top: 0px;
+                                    width: 100%;
+                                    z-index: 999;
+                                    background-color: rgba(255, 255, 255, 0.575);
+                                    .products {
+                                        position: relative;
+                                        text-align: center;
+                                        &:hover {
+                                            #li1 {
+                                                animation: err2 .2s linear forwards;
+                                            }
+                                            #li2 {
+                                                animation: err .2s linear .2s forwards;
+                                            }
+                                            #li3 {
+                                                animation: err .2s linear .4s forwards;
+                                            }
+                                            #li4 {
+                                                animation: err .2s linear .6s forwards;
+                                            }
+                                        }
+                                        .tit {
+                                            position: relative;
+                                            width: 7vw;
+                                        }
+                                        .list-product {
+                                            margin: 5% 0%;
+                                            perspective: 500px;
+                                            display: none;
+                                            li {
+                                                width: 7vw;
+                                                background: url(photo/button1.png);
+                                                background-size: 100% 100%;
+                                                text-align: center;
+                                                padding: 12%;
+                                                margin: 2% auto;
+                                                color: #916a00;
+                                                transform-style: preserve-3d;
+                                                transform-origin: top;
+                                                transform: rotateX(180deg);
+                                                opacity: 0;
+                                                &:hover {
+                                                    font-weight: 700;
+                                                }
+                                            }
+                                            li:nth-child(1) {
+                                                transform: rotateX(90deg);
+                                            }
+                                            @keyframes err {
+                                                from {
+                                                    opacity: 1;
+                                                    transform: rotateX(180deg);
+                                                }
+                                                to {
+                                                    opacity: 1;
+                                                    transform: rotateX(0deg);
+                                                }
+                                            }
+                                            @keyframes err2 {
+                                                from {
+                                                    opacity: 1;
+                                                    transform: rotateX(90deg);
+                                                }
+                                                to {
+                                                    opacity: 1;
+                                                    transform: rotateX(0deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .navbar-main2 {
+                                    position: fixed;
+                                    top: 0px;
+                                    width: 100%;
+                                    z-index: 999;
+                                    background-color: rgb(255, 255, 255);
+                                    box-shadow: 0px .3px 10px rgb(180, 180, 180);
+                                    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+                                    .products {
+                                        position: relative;
+                                        text-align: center;
+                                        &:hover {
+                                            #li1 {
+                                                animation: err2 .2s linear forwards;
+                                            }
+                                            #li2 {
+                                                animation: err .2s linear .2s forwards;
+                                            }
+                                            #li3 {
+                                                animation: err .2s linear .4s forwards;
+                                            }
+                                            #li4 {
+                                                animation: err .2s linear .6s forwards;
+                                            }
+                                        }
+                                        .tit {
+                                            position: relative;
+                                            width: 7vw;
+                                        }
+                                        .list-product {
+                                            margin: 5% 0%;
+                                            perspective: 500px;
+                                            display: none;
+                                            li {
+                                                width: 7vw;
+                                                background: url(photo/button1.png);
+                                                background-size: 100% 100%;
+                                                text-align: center;
+                                                padding: 12%;
+                                                margin: 2% auto;
+                                                color: #916a00;
+                                                transform-style: preserve-3d;
+                                                transform-origin: top;
+                                                transform: rotateX(180deg);
+                                                opacity: 0;
+                                                &:hover {
+                                                    font-weight: 700;
+                                                }
+                                            }
+                                            li:nth-child(1) {
+                                                transform: rotateX(90deg);
+                                            }
+                                            @keyframes err {
+                                                from {
+                                                    opacity: 1;
+                                                    transform: rotateX(180deg);
+                                                }
+                                                to {
+                                                    opacity: 1;
+                                                    transform: rotateX(0deg);
+                                                }
+                                            }
+                                            @keyframes err2 {
+                                                from {
+                                                    opacity: 1;
+                                                    transform: rotateX(90deg);
+                                                }
+                                                to {
+                                                    opacity: 1;
+                                                    transform: rotateX(0deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .menu-mobile {
+                                    position: fixed;
+                                    top: 0px;
+                                    z-index: 999;
+                                    display: none;
+                                    text-shadow: 0px 0px 2px rgb(255, 253, 253);
+                                    padding: 1%;
+                                }
+                                
+                                @media only screen and(max-width:600px) {
+                                    .navbar-main,
+                                    .navbar-main2 {
+                                        height: 7vh;
+                                    }
+                                    .menu-mobile {
+                                        display: inherit;
+                                        padding: 10px;
+                                        p {
+                                            color: #BF953F;
+                                            width: 20px;
+                                            transform: rotate(90deg);
+                                            text-shadow: 0px 0px 2px rgb(255, 253, 253);
+                                            font-weight: 600;
+                                        }
+                                    }
+                                    .ul-nav {
+                                        display: none;
+                                    }
+                                    .ul-nav-left {
+                                        position: fixed;
+                                        top: 10px;
+                                        left: 10px;
+                                    }
+                                }
+                                
+                                .nav-mobile {
+                                    width: 100vw;
+                                    position: fixed;
+                                    top: 6.5vh;
+                                    right: 0px;
+                                    padding-right: 15px;
+                                    padding-bottom: 3vh;
+                                    background-color: rgb(255, 255, 255);
+                                    color: #464646;
+                                    z-index: 999;
+                                    box-shadow: 0px 250px 250px rgba(63, 63, 63, 0.486);
+                                    .navbar-list {
+                                        width: 100vw;
+                                        list-style: none;
+                                        padding: 0px;
+                                        li {
+                                            line-height: 5vh;
+                                            ul {
+                                                list-style: none;
+                                                padding: 3px;
+                                                li {
+                                                    padding-right: 10px;
+                                                    padding-top: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .container-3d {
+                                    perspective: 1000px;
+                                    width: 100%;
+                                }
+                                
+                                .container-page .containerPage {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100vh;
+                                    // background-color: red;
+                                    transform-style: preserve-3d;
+                                    transition: 1.5s transform;
+                                }
+                                
+                                input {
+                                    display: none;
+                                }
+                                
+                                .class-page-all {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    backface-visibility: hidden;
+                                }
+                                
+                                #one {
+                                    transform-style: preserve-3d;
+                                    background-position: center;
+                                    @media only screen and(max-width: 600px) {
+                                        background-size: 200% 100%;
+                                        background-position: 80% 80%;
+                                    }
+                                    #parallax {
+                                        position: relative;
+                                        top: 0px;
+                                        width: 100%;
+                                        height: 100vh;
+                                        background-image: url(photo/line-parallax.png);
+                                        background-repeat: no-repeat;
+                                        background-position: 100% 100%;
+                                        background-size: contain;
+                                        background-color: rgb(253, 252, 182);
+                                        #brand {
+                                            position: absolute;
+                                            width: 50%;
+                                            height: 50%;
+                                            text-align: center;
+                                            top: 20%;
+                                            left: 25%;
+                                            transform: translate(-50%, -50%);
+                                            color: #BF953F;
+                                            text-shadow: 0px 0px 10px rgb(255, 255, 255);
+                                            font-family: "brand";
+                                            text-transform: uppercase;
+                                            opacity: .4;
+                                            font-size: 180px;
+                                            transform: translateZ(100px) scale(0.98);
+                                            perspective: 1000px;
+                                        }
+                                        @media only screen and(max-width:600px) {
+                                            background-position: 100% 90%;
+                                            background-size: 120% 30%;
+                                            #brand {
+                                                font-size: 120px;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                #two {
+                                    background: url(photo/bg2.jpg) no-repeat;
+                                    background-position: center 98%;
+                                    background-size: cover;
+                                    background-color: rgb(253, 252, 182);
+                                    transform: rotateY(180deg);
+                                    z-index: -1;
+                                    color: #929292;
+                                    @media only screen and(max-width: 600px) {
+                                        background-size: cover;
+                                    }
+                                    .content {
+                                        h3 {
+                                            width: 30vw;
+                                            height: 10vh;
+                                            background: url(photo/button1.png);
+                                            background-size: 100% 100%;
+                                            margin: 14% auto;
+                                            line-height: 200%;
+                                            margin-bottom: 30px;
+                                            color: #916a00;
+                                        }
+                                        width: 40%;
+                                        margin: 0 auto;
+                                        text-align: center;
+                                        @media only screen and(max-width:600px) {
+                                            width: 80vw;
+                                            padding-top: 10%;
+                                            h3 {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                #radio2:checked~.container-page .containerPage #product1 {
+                                    animation: products .5s linear .8s forwards;
+                                }
+                                
+                                #radio2:checked~.container-page .containerPage #product2 {
+                                    animation: products .5s linear 1s forwards;
+                                }
+                                
+                                #radio2:checked~.container-page .containerPage #product3 {
+                                    animation: products .5s linear 1.2s forwards;
+                                }
+                                
+                                #radio2:checked~.container-page .containerPage #product4 {
+                                    animation: products .5s linear 1.4s forwards;
+                                }
+                                
+                                @keyframes products {
+                                    0% {
+                                        opacity: 1;
+                                        margin-top: -10%;
+                                    }
+                                    100% {
+                                        opacity: 1;
+                                        margin-top: 2%;
+                                    }
+                                }
+                                
+                                .labels {
+                                    position: fixed;
+                                    top: 40%;
+                                    right: 3%;
+                                    z-index: 998;
+                                    #dot1 {
+                                        position: relative;
+                                        width: 15px;
+                                        height: 15px;
+                                        background-color: #e1ad21;
+                                        border-radius: 50%;
+                                    }
+                                    #dot2,
+                                    #dot3,
+                                    #dot4,
+                                    #dot5 {
+                                        position: relative;
+                                        width: 15px;
+                                        height: 15px;
+                                        background-color: rgb(223, 221, 221);
+                                        border-radius: 50%;
+                                    }
+                                }
+                                
+                                #radio1:checked~.labels #dot1,
+                                #radio2:checked~.labels #dot2,
+                                #radio3:checked~.labels #dot3,
+                                #radio4:checked~.labels #dot4,
+                                #radio5:checked~.labels #dot5 {
+                                    background-color: #e1ad21;
+                                    box-shadow: 0px 0px 4px rgb(255, 255, 255);
+                                }
+                                
+                                #radio2:checked~.labels #dot1,
+                                #radio3:checked~.labels #dot1,
+                                #radio4:checked~.labels #dot1,
+                                #radio5:checked~.labels #dot1 {
+                                    background-color: rgb(223, 221, 221);
+                                }
+                                
+                                #radio1:checked~.container-page .containerPage {
+                                    z-index: 99;
+                                }
+                                
+                                #radio2:checked~.container-page .containerPage {
+                                    z-index: 99;
+                                    transform: rotateY(180deg);
+                                }
+                                
+                                .section3 {
+                                    position: relative;
+                                    top: 0px;
+                                    width: 100%;
+                                    height: 100vh;
+                                    background: url(photo/20.jpg) no-repeat;
+                                    background-size: 100% 100%;
+                                    background-position: 0% 0%;
+                                    background-color: rgb(253, 252, 182);
+                                    h5 {
+                                        position: absolute;
+                                        margin-right: 35%;
+                                        padding: 1%;
+                                        border-bottom: 1px solid #d69d00;
+                                        color: #d69d00;
+                                        margin-top: 30vh;
+                                    }
+                                    .box-brand {
+                                        position: absolute;
+                                        width: 55%;
+                                        height: 40vh;
+                                        margin: 50vh 10% 0 0;
+                                        display: flex;
+                                        justify-content: space-around;
+                                        .img-card {
+                                            width: 15%;
+                                            height: 80%;
+                                            .img {
+                                                width: 100%;
+                                                height: 50%;
+                                                border-radius: 20%;
+                                                opacity: .8;
+                                            }
+                                            .img1 {
+                                                background: url(photo/adidas.png);
+                                                background-size: 100% 100%;
+                                            }
+                                            .img2 {
+                                                background: url(photo/nike.png);
+                                                background-size: 100% 100%;
+                                            }
+                                            .img3 {
+                                                background: url(photo/gucci.png);
+                                                background-size: 100% 100%;
+                                            }
+                                            .img4 {
+                                                background: url(photo/d&g.png);
+                                                background-size: 100% 100%;
+                                            }
+                                        }
+                                    }
+                                    h6 {
+                                        text-align: center;
+                                        color: #916a00;
+                                        margin-top: 5px;
+                                    }
+                                    @media only screen and(max-width:600px) {
+                                        h5 {
+                                            position: absolute;
+                                            margin-right: 25vw;
+                                            padding: 1%;
+                                            border-bottom: 1px solid #d69d00;
+                                            color: #d69d00;
+                                            margin-top: 7vh;
+                                        }
+                                        background: url(photo/18.jpg) no-repeat;
+                                        background-size: 100% 100%;
+                                        background-position: 0% 0%;
+                                        .box-brand {
+                                            width: 55%;
+                                            height: 70vh;
+                                            margin: 20vh 30vw 0 0;
+                                            display: flex;
+                                            justify-content: space-around;
+                                            flex-direction: column;
+                                            .img-card {
+                                                width: 30%;
+                                                height: 100%;
+                                                margin-top: 0px;
+                                                .img {
+                                                    width: 100%;
+                                                    height: 50%;
+                                                    border-radius: 20%;
+                                                    opacity: .8;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                #radio3:checked~.container-page .section3 .box-brand .img-card {
+                                    animation: brands 2s linear forwards;
+                                }
+                                
+                                @keyframes brands {
+                                    0% {
+                                        margin-right: -100px;
+                                    }
+                                    100% {
+                                        margin-right: 0px;
+                                    }
+                                }
+                                
+                                .section-4 {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100vh;
+                                    background-color: rgb(253, 252, 182);
+                                    .container-box {
+                                        position: absolute;
+                                        display: flex;
+                                        justify-content: center;
+                                        div {
+                                            width: 20%;
+                                            margin-top: 12%;
+                                            text-align: center;
+                                            color: #6d6d6d;
+                                            img {
+                                                width: 40%;
+                                                margin-left: 30%;
+                                                margin-right: 30%;
+                                            }
+                                        }
+                                        div:nth-child(1) {
+                                            animation: anime2 1s linear .5s forwards;
+                                        }
+                                        div:nth-child(2) {
+                                            animation: anime2 1s linear .8s forwards;
+                                        }
+                                        div:nth-child(3) {
+                                            animation: anime2 1s linear 1.1s forwards;
+                                        }
+                                        div:nth-child(4) {
+                                            animation: anime2 1s linear 1.4s forwards;
+                                        }
+                                        @keyframes anime {
+                                            0% {
+                                                margin-top: 12%;
+                                            }
+                                            100% {
+                                                margin-top: 14%;
+                                            }
+                                        }
+                                        @media only screen and(max-width:600px) {
+                                            display: inherit;
+                                            padding-top: 12%;
+                                            div {
+                                                width: 80%;
+                                                margin-right: 10%;
+                                                img {
+                                                    width: 20%;
+                                                }
+                                            }
+                                            h4 {
+                                                font-size: 4vw;
+                                            }
+                                            p {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                #radio4:checked~.container-page .section-4 .container-box div:nth-child(1) {
+                                    animation: anime 2s linear .1s forwards;
+                                }
+                                
+                                #radio4:checked~.container-page .section-4 .container-box div:nth-child(2) {
+                                    animation: anime 2s linear .4s forwards;
+                                }
+                                
+                                #radio4:checked~.container-page .section-4 .container-box div:nth-child(3) {
+                                    animation: anime 2s linear .7s forwards;
+                                }
+                                
+                                #radio4:checked~.container-page .section-4 .container-box div:nth-child(4) {
+                                    animation: anime 2s linear 1s forwards;
+                                }
+                                
+                                .footer {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100vh;
+                                    background: url(photo/background-footer.jpg);
+                                    padding-top: 5%;
+                                    h1 {
+                                        font-family: brand;
+                                        text-align: center;
+                                        font-size: 15vw;
+                                        margin-top: 13vh;
+                                        color: #BF953F;
+                                    }
+                                    h4 {
+                                        text-align: center;
+                                        color: #BF953F;
+                                    }
+                                    .img {
+                                        width: 4%;
+                                        margin: 0 47.5%;
+                                    }
+                                    .box-icon {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        div {
+                                            width: 3%;
+                                            margin: 20px;
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                    @media only screen and(max-width:600px) {
+                                        h1 {
+                                            font-size: 30vw;
+                                            margin-top: 13%;
+                                        }
+                                        .img {
+                                            width: 15%;
+                                            margin: 0 42.5%;
+                                        }
+                                        .box-icon {
+                                            div {
+                                                width: 8%;
+                                                img {
+                                                    width: 30px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .footer2 {
+                                    width: 100%;
+                                    background: rgb(230, 230, 230);
+                                    margin: 10vh 0 0 0;
+                                    h1 {
+                                        font-family: brand;
+                                        text-align: center;
+                                        font-size: 10vw;
+                                        margin-top: 2vh;
+                                        color: #BF953F;
+                                    }
+                                    h4 {
+                                        text-align: center;
+                                        color: #BF953F;
+                                    }
+                                    .img {
+                                        width: 5%;
+                                        margin: 0 47.5%;
+                                    }
+                                    .box-icon {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        div {
+                                            width: 7%;
+                                            margin: 20px;
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                    @media only screen and(max-width:600px) {
+                                        h1 {
+                                            font-size: 30vw;
+                                            margin-top: 13%;
+                                        }
+                                        .img {
+                                            width: 15%;
+                                            margin: 0 42.5%;
+                                        }
+                                        .box-icon {
+                                            div {
+                                                width: 8%;
+                                                img {
+                                                    width: 40px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .login {
+                                    width: 100vw;
+                                    height: 100vh;
+                                    color: #616161;
+                                    .form-login {
+                                        position: relative;
+                                        width: 40vw;
+                                        margin: 15vh 30vw;
+                                        padding: 20px;
+                                        border-radius: 8px;
+                                        background-color: #fff;
+                                        box-shadow: 0px 0px 10px #ffd000c4;
+                                        @media only screen and(max-width: 600px) {
+                                            width: 80vw;
+                                            margin: 15vh 10vw;
+                                        }
+                                        button {
+                                            background-color: #ffd000c4;
+                                        }
+                                    }
+                                }
+                                
+                                .register {
+                                    width: 100vw;
+                                    height: 100vh;
+                                    color: #616161;
+                                    .form-login {
+                                        position: relative;
+                                        width: 40vw;
+                                        margin: 15vh 30vw;
+                                        padding: 20px;
+                                        border-radius: 8px;
+                                        background-color: #fff;
+                                        box-shadow: 0px 0px 10px #ffd000c4;
+                                        @media only screen and(max-width: 600px) {
+                                            width: 80vw;
+                                            margin: 15vh 10vw;
+                                        }
+                                        button {
+                                            background-color: #ffd000c4;
+                                        }
+                                    }
+                                }
+                                
+                                .shoes,
+                                .pants,
+                                .shirt,
+                                .bag {
+                                    width: 100%;
+                                    .container-product {
+                                        width: 100%;
+                                        margin-top: 10vh;
+                                        display: flex;
+                                        justify-content: space-around;
+                                        flex-wrap: wrap;
+                                        padding: 3%;
+                                        .box {
+                                            width: 23%;
+                                            height: 70vh;
+                                            margin-top: 4vh;
+                                            border-radius: 5px;
+                                            overflow: hidden;
+                                            box-shadow: 0px 0px 10px #ffd000c4;
+                                            color: #616161;
+                                            @media only screen and(max-width: 600px) {
+                                                width: 90%;
+                                            }
+                                            img {
+                                                width: 100%;
+                                                height: 70%;
+                                            }
+                                            .title {
+                                                margin: 5%;
+                                            }
+                                            .off {
+                                                span {
+                                                    background-color: rgba(255, 223, 44, 0.904);
+                                                }
+                                            }
+                                            .price {
+                                                font-weight: 700;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .single {
+                                    margin: 15vh 0 0 0;
+                                    .box {
+                                        width: 70%;
+                                        height: 90vh;
+                                        margin: 4vh 15% 0 0;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        overflow: hidden;
+                                        box-shadow: 0px 0px 1000px #ffd000c4;
+                                        color: #616161;
+                                        img {
+                                            height: 100%;
+                                        }
+                                        .title {
+                                            font-weight: 700;
+                                            font-size: 25px;
+                                        }
+                                        .off {
+                                            span {
+                                                background-color: rgba(255, 223, 44, 0.904);
+                                            }
+                                        }
+                                        .price {
+                                            font-weight: 700;
+                                        }
+                                        select {
+                                            width: 50%
+                                        }
+                                        button {
+                                            background-color: rgb(255, 208, 0);
+                                            margin-top: 5%;
+                                        }
+                                    }
+                                    @media only screen and(max-width:600px) {
+                                        .box {
+                                            width: 90%;
+                                            height: auto;
+                                            padding-bottom: 10px;
+                                            margin: 4vh 5% 0 0;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            overflow: hidden;
+                                            box-shadow: 0px 0px 1000px #ffd000c4;
+                                            color: #616161;
+                                            img {
+                                                width: 100%;
+                                                height: 50%;
+                                            }
+                                            .title {
+                                                font-weight: 700;
+                                                font-size: 16px;
+                                            }
+                                            .off {
+                                                span {
+                                                    background-color: rgba(255, 223, 44, 0.904);
+                                                }
+                                            }
+                                            .price {
+                                                font-weight: 700;
+                                            }
+                                            select {
+                                                width: 50%
+                                            }
+                                            button {
+                                                background-color: rgb(255, 208, 0);
+                                                margin-top: 5%;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .box-login {
+                                    margin-left: 30px;
+                                    img {
+                                        width: 19px;
+                                    }
+                                    #total-cart {
+                                        position: absolute;
+                                        margin: -6px -10px 0 0;
+                                        color: #fff;
+                                        background-color: #ff0000;
+                                        padding: 2px;
+                                        font-size: 6px;
+                                    }
+                                    @media only screen and(max-width: 600px) {
+                                        margin-left: 10px;
+                                    }
+                                    li {
+                                        margin-right: 7%;
+                                        text-align: left;
+                                        padding: 0px;
+                                    }
+                                }
+                                
+                                .shopping-cart {
+                                    width: 90%;
+                                    margin: 15vh 5% 0 0;
+                                    // box-shadow: 0px 0px 10px #ffd000c4;
+                                    th {
+                                        border-bottom: 1px solid #ffd000c4;
+                                    }
+                                    td {
+                                        padding: 10px;
+                                    }
+                                    tr:nth-child(even) {
+                                        background-color: #ffee0070;
+                                    }
+                                    td:nth-child(even) {
+                                        background-color: #64ff7870;
+                                    }
+                                    #img-product {
+                                        width: 30%;
+                                    }
+                                    #trash {
+                                        width: 17%;
+                                        cursor: pointer;
+                                    }
+                                    @media only screen and(max-width:600px) {
+                                        font-size: 5px;
+                                        width: 98%;
+                                        margin: 15vh 1% 0 0;
+                                        #img-product {
+                                            width: 60%;
+                                        }
+                                        #trash {
+                                            width: 20px;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                                
+                                .scrollHide {
+                                    overflow: hidden;
+                                }

@@ -1,0 +1,107 @@
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin animate($name, $duration, $iteration, $direction) {
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
+    -webkit-animation-iteration-count: $iteration;
+    -moz-animation-iteration-count: $iteration;
+    -o-animation-iteration-count: $iteration;
+    animation-iteration-count: $iteration;
+    -webkit-animation-name: $name;
+    -moz-animation-name: $name;
+    -o-animation-name: $name;
+    animation-name: $name;
+    -webkit-animation-direction: $direction;
+    -moz-animation-direction: $direction;
+    -o-animation-direction: $direction;
+    animation-direction: $direction;
+}
+
+.navbar-main {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.575);
+    .products {
+        position: relative;
+        text-align: center;
+        &:hover {
+            #li1 {
+                animation: err2 .2s linear forwards;
+            }
+            #li2 {
+                animation: err .2s linear .2s forwards;
+            }
+            #li3 {
+                animation: err .2s linear .4s forwards;
+            }
+            #li4 {
+                animation: err .2s linear .6s forwards;
+            }
+        }
+        .tit {
+            position: relative;
+            width: 7vw;
+        }
+        .list-product {
+            margin: 5% 0%;
+            perspective: 500px;
+            display: none;
+            li {
+                width: 7vw;
+                background: url(photo/button1.png);
+                background-size: 100% 100%;
+                text-align: center;
+                padding: 12%;
+                margin: 2% auto;
+                color: #916a00;
+                transform-style: preserve-3d;
+                transform-origin: top;
+                transform: rotateX(180deg);
+                opacity: 0;
+                &:hover {
+                    font-weight: 700;
+                }
+            }
+            li:nth-child(1) {
+                transform: rotateX(90deg);
+            }
+            @keyframes err {
+                from {
+                    opacity: 1;
+                    transform: rotateX(180deg);
+                }
+                to {
+                    opacity: 1;
+                    transform: rotateX(0deg);
+                }
+            }
+            @keyframes err2 {
+                from {
+                    opacity: 1;
+                    transform: rotateX(90deg);
+                }
+                to {
+                    opacity: 1;
+                    transform: rotateX(0deg);
+                }
+            }
+        }
+    }
+}
