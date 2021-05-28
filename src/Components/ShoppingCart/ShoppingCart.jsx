@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { SimpleContext } from '../../Context/Context';
 import TopNav2 from './../Navs/TopNav2';
 import Footer2 from './../Pages/Footer2';
+import { Helmet } from 'react-helmet';
 
 const ShoppingCart = () => {
     const context=useContext(SimpleContext);
@@ -19,6 +20,9 @@ const ShoppingCart = () => {
     
     return ( 
         <div>
+            <Helmet>
+                <title>سبد خرید</title>
+            </Helmet>
             <TopNav2/>
             <div className="shopping-cart">
                         <table className="list-unstyled list-inline text-center w-100">

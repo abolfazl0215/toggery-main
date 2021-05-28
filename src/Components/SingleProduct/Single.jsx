@@ -3,6 +3,7 @@ import { SimpleContext } from '../../Context/Context';
 import { Link } from 'react-router-dom';
 import TopNav2 from '../Navs/TopNav2';
 import Footer2 from './../Pages/Footer2';
+import { Helmet } from 'react-helmet';
 
 const Single = () => {
     const context=useContext(SimpleContext);
@@ -15,6 +16,9 @@ const Single = () => {
     return ( 
 
         <div className="single">
+            <Helmet>
+                <title>محصول </title>
+            </Helmet>
             <TopNav2/>
                 <div className="box">   
                     <img src={localStorage.getItem("imageItem")} alt="تصویر محصول"/>

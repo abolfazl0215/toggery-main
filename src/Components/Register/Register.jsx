@@ -4,6 +4,7 @@ import TopNav2 from './../Navs/TopNav2';
 import { Link } from 'react-router-dom';
 import SimpleReactValidator from 'simple-react-validator';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 const Register = ({history}) => {
 
@@ -33,6 +34,9 @@ const Register = ({history}) => {
 
     return ( 
         <div className="register">
+            <Helmet>
+                <title>عضویت در سایت</title>
+            </Helmet>
             <TopNav2/>
             <div className="form-login">
                 <h4>ثبت نام :</h4><br/>

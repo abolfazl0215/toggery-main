@@ -4,6 +4,7 @@ import Footer2 from '../Pages/Footer2';
 import { Link } from 'react-router-dom';
 import SimpleReactValidator from 'simple-react-validator';
 import { toast } from 'react-toastify';
+import {Helmet} from "react-helmet";
 
 const Login = ({history}) => {
 
@@ -33,6 +34,9 @@ const Login = ({history}) => {
 
     return ( 
         <div className="login">
+            <Helmet>
+                <title>ورود به سایت</title>
+            </Helmet>
             <TopNav2/>
                 <div className="form-login">
                     <h4>ورود به سایت</h4><br/>

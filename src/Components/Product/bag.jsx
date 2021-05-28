@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import server from '../../Server/Server.json';
 import TopNav2 from '../Navs/TopNav2';
 import Footer2 from './../Pages/Footer2';
+import { Helmet } from 'react-helmet';
 
 
 const Bag = () => {
@@ -17,6 +18,9 @@ const Bag = () => {
     }
     return ( 
         <div className="bag">
+            <Helmet>
+                <title>کیف</title>
+            </Helmet>
             <TopNav2/>
                 <div className="container-product">
                     {server.products.map(z=>(

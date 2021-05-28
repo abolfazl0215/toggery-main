@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const MainLayout = (props) => {
 
@@ -24,6 +25,10 @@ const MainLayout = (props) => {
     
     return ( 
             <div style={{overflow:"hidden",width:"100%",height:"100%"}}>
+
+              <Helmet>
+                <title>صفخه اصلی</title>
+              </Helmet>
 
               <input type="radio" name="pages" id="radio2"/>
               <input type="radio" name="pages" id="radio1"/>
